@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>给未来自己的信动画</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0e6d2;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+     .letter {
+            width: 80px;
+            height: 120px;
+            background-color: #fffae5;
+            border: 2px solid #d1b280;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: all 5s ease;
+            cursor: pointer;
+            max-width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+     .letter-content {
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            opacity: 0;
+            transition: opacity 2s ease;
+            white-space: pre-line;
+        }
+
+     .letter-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #d1b280;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+     .choice-container {
+            margin-top: 20px;
+        }
+
+     .choice {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="letter" id="letter">
+        <div class="letter-content" id="letterContent">
+            未来的我：
+            你好！当你读到这封信的时候，时间已经在我的生命里留下了新的痕迹，不知道此刻的你正站在人生的哪一个里程碑上回望过去呢？
+
+            还记得那次独自背包去远方旅行吗？我怀揣着对未知的好奇和一丝忐忑，踏上了那片陌生的土地。当我第一次站在那片金黄的沙漠中，看着夕阳将沙丘染成橙红色，我被大自然的壮丽深深震撼。那是一种无法用言语形容的美，让我感受到了自己的渺小，也让我明白了世界的广阔。
+            <img src="desert.jpg" alt="沙漠场景" class="letter-img">
+
+            在旅行的途中，我遇到了一位流浪画家。他背着简单的行囊，手中的画笔却仿佛有着神奇的魔力，能将世间的美好都描绘在画布上。和他的交谈中，我得知他放弃了安稳的生活，选择用画笔去记录这个世界。他的故事让我深受触动，也让我开始思考自己的人生。我问自己，我是否有勇气去追求自己真正热爱的东西？
+            <img src="artist.jpg" alt="流浪画家" class="letter-img">
+
+            事业上，我现在正处于一个迷茫的阶段。每天在办公室里对着电脑，做着重复而繁琐的工作，我时常感到自己的热情在一点点被消磨。我梦想着能在自己热爱的领域发光发热，可现实却总是给我泼冷水。但我相信，只要坚持下去，总有一天我能找到属于自己的方向。
+            <img src="office.jpg" alt="办公室场景" class="letter-img">
+
+            生活里，最近我养了一只小狗。它毛茸茸的，眼睛亮晶晶的，总是在我回家的时候欢快地扑向我。它给我的生活带来了很多乐趣，也让我懂得了什么是责任。我想象着未来的你，身边或许也有这样一个温暖的小生命陪伴着你。
+            <img src="dog.jpg" alt="小狗" class="letter-img">
+
+            我希望你已经去过了那些列在清单上的远方，在雪山下感受过大自然的雄浑，在海边看过绝美的日出日落。那些在地图上用红笔圈出的地方，都成为了你人生阅历中的宝贵篇章。
+
+            如果你投身于教育行业，是不是已经桃李满天下，看到学生们因为你的教导而找到人生方向，你会无比欣慰；要是你选择了艺术创作，那你的作品是否已经被更多人欣赏，让你的灵感和才华得到了充分的展现。
+
+            也希望你已经组建了一个温暖的家庭，有理解支持你的伴侣，还有可爱的孩子。一家人围坐在一起吃晚餐，分享着一天的趣事，这样简单而温馨的场景，是我此刻对未来生活最美好的想象。
+
+            但人生总会有一些意想不到的转折，假设你在追求梦想的道路上，面临一个重大选择：
+            <div class="choice-container" id="choice1">
+                <input type="radio" id="choiceA" name="choice1" class="choice">
+                <label for="choiceA">选择一条充满挑战但可能带来巨大成功的道路。</label><br>
+                <input type="radio" id="choiceB" name="choice1" class="choice">
+                <label for="choiceB">选择一条相对平稳但可能错过一些机会的道路。</label>
+                <button id="submitChoice1">提交选择</button>
+            </div>
+
+            <div id="result1" style="display: none;"></div>
+
+            不管当下的你正经历着什么，都请记住，过去的每一次努力、每一次跌倒又爬起，都塑造了现在的你。未来的路或许依旧充满挑战，但我相信你有足够的勇气和智慧去面对。愿你始终保持初心，永远热爱生活，继续追逐更耀眼的光芒。
+
+            [你的名字]
+            [写信日期]
+        </div>
+    </div>
+    <button id="openButton">打开书信</button>
+    <button id="replayButton" style="display: none;">重播动画</button>
+    <input type="text" id="nameInput" placeholder="请输入你的名字">
+    <button id="confirmButton">确认名字</button>
+    <audio id="openSound" src="https://www.soundjay.com/mechanical/sounds/envelope-opening-01.mp3" preload="auto"></audio>
+    <script>
+        const letter = document.getElementById('letter');
+        const letterContent = document.getElementById('letterContent');
+        const openButton = document.getElementById('openButton');
+        const replayButton = document.getElementById('replayButton');
+        const openSound = document.getElementById('openSound');
+        const nameInput = document.getElementById('nameInput');
+        const confirmButton = document.getElementById('confirmButton');
+        const choice1 = document.getElementById('choice1');
+        const result1 = document.getElementById('result1');
+        const submitChoice1 = document.getElementById('submitChoice1');
+
+        // 获取当前日期并格式化为 YYYY - MM - DD 格式
+        const getCurrentDate = () => {
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
+
+        // 将信件内容中的 [写信日期] 替换为当前日期
+        const currentDate = getCurrentDate();
+        let originalContent = letterContent.textContent;
+        originalContent = originalContent.replace('[写信日期]', currentDate);
+        letterContent.textContent = originalContent;
+
+        confirmButton.addEventListener('click', () => {
+            const name = nameInput.value;
+            if (name) {
+                const newContent = letterContent.textContent.replace('[你的名字]', name);
+                letterContent.textContent = newContent;
+                // 隐藏输入框和确认按钮
+                nameInput.style.display = 'none';
+                confirmButton.style.display = 'none';
+
+                // 播放音效
+                openSound.play();
+
+                // 书信展开动画，宽度和高度自适应内容
+                letter.style.width = '90%';
+                letter.style.height = 'auto';
+
+                // 禁用打开按钮
+                openButton.disabled = true;
+                openButton.style.display = 'none';
+
+                // 立即显示完整文字内容
+                letterContent.style.opacity = 1;
+
+                // 显示重播按钮
+                replayButton.style.display = 'block';
+            }
+        });
+
+        openButton.addEventListener('click', () => {
+            // 播放音效
+            openSound.play();
+            // 书信展开动画，宽度和高度自适应内容
+            letter.style.width = '90%';
+            letter.style.height = 'auto';
+            // 禁用打开按钮
+            openButton.disabled = true;
+            openButton.style.display = 'none';
+            // 立即显示完整文字内容
+            letterContent.style.opacity = 1;
+            // 显示重播按钮
+            replayButton.style.display = 'block';
+        });
+
+        replayButton.addEventListener('click', () => {
+            // 重置书信状态
+            letter.style.width = '80px';
+            letter.style.height = '120px';
+            letterContent.style.opacity = 0;
+
+            // 启用打开按钮
+            openButton.disabled = false;
+            openButton.style.display = 'block';
+
+            // 隐藏重播按钮
+            replayButton.style.display = 'none';
+
+            // 重新显示输入框和确认按钮，重置信件中的名字
+            nameInput.style.display = 'block';
+            confirmButton.style.display = 'block';
+            nameInput.value = '';
+            letterContent.textContent = originalContent;
+            result1.style.display = 'none';
+            choice1.style.display = 'block';
+        });
+
+        // 支持手势操作（点击书信也能打开）
+        letter.addEventListener('click', () => {
+            if (!openButton.disabled) {
+                openButton.click();
+            }
+        });
+
+        submitChoice1.addEventListener('click', () => {
+            const selectedChoice = document.querySelector('input[name="choice1"]:checked');
+            if (selectedChoice) {
+                choice1.style.display = 'none';
+                result1.style.display = 'block';
+                if (selectedChoice.id === 'choiceA') {
+                    result1.textContent = '你选择了充满挑战的道路，接下来的日子里，你将面临无数困难，但每一次克服都让你更加接近成功。';
+                } else {
+                    result1.textContent = '你选择了平稳的道路，虽然生活没有太多波澜，但你也在平凡中找到了属于自己的小确幸。';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
